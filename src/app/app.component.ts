@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'data-binding';
+  serverElements = [{type:'server',name:'test server',content:'just a test'}];
+ 
+  dodajServerUNiz(serverData:{serverName:string,serverContent:string}) {
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+  }
+ 
 }
